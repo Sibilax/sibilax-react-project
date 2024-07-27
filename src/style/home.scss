@@ -1,0 +1,13 @@
+.homepage-wrapper { 
+    display: grid;// Esto hará que estén ubicados arriba de portfolio items y vayan de lado a lado, esto evita que haya problemas con el diseño reactivo. Todo debe estar cubierto con algún selector que nos permita ñluego cambiarlo y adaptarlo.
+    grid-template-columns: 1fr;
+  
+    .filter-links {
+      display: flex; //los elementos se ubican uno al lado del otro
+      justify-content: space-around;
+  
+      .btn {
+        width: 100%; //para que ocupen todo el espacio
+      }
+    }
+  }

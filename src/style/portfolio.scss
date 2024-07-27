@@ -1,0 +1,52 @@
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  
+    .portfolio-item-wrapper {
+      position: relative; //para poder usar position absolute en un hijo el padre debe ser relative - css rule
+
+      .portfolio-img-background {
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 350px;
+        width: 100%;
+      }
+
+      .img-text-wrapper {
+        position: absolute; //controla donde irá cada elemento
+        top: 0; //para que se alinee arriba
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+
+      .subtitle {
+        transform: 1s ease-in-out;
+        color: transparent;//para que solo se muestre la descripción al hacer hover sobre la imagen - aún no se van a ver pq son transparente, luego se verán
+        
+      }
+    }
+
+    .img-text-wrapper:hover .subtitle { //lo ponemos separado para que el nesting no sea tan largo y se lea mejor el código, si el nesting es excesivo el debugging se complica
+      color: $teal;
+      font-weight: 400;
+    }
+
+    .logo-wrapper img {
+      width: 50%; //para la imagen
+      margin-bottom: 20px;
+    }
+
+}
+
+.image-blur {
+  transition: 1s;
+  filter: brightness(10%) //es lo que va a oscurecer la imagen
+
+}
